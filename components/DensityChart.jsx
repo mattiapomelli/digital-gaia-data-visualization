@@ -19,7 +19,7 @@ ChartJS.register(
   Legend
 );
 
-const BarChart = () => {
+const DensityChart = () => {
   const [chartData, setChartData] = useState({
     datasets: [],
   });
@@ -45,7 +45,7 @@ const BarChart = () => {
             },
             title: {
                 display: true,
-                text: 'Daily Revenue'
+                text: 'Density Over Time'
             }
         },
         maintainAspectRatio: false,
@@ -62,4 +62,4 @@ const BarChart = () => {
   );
 };
 
-export default BarChart;
+export default DensityChart;
