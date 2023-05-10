@@ -8,7 +8,7 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 const basePromptPrefix = `
-Given this dataset about a hemp farm.
+This is a dataset of observations about a hemp farm, taken over the course of a year one time per month.
 
 Dataset:
 `;
