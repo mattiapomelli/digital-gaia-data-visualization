@@ -22,11 +22,11 @@ ChartJS.register(
 );
 
 
-const hempDensityData = report.map((item) => item.observations[2].value[0])
+const hempYieldData = report.map((item) => item.observations[0].value[0])
 
-console.log("Density: ", hempDensityData)
+console.log("Yield: ", hempYieldData)
 
-const DensityChart = () => {
+const TestChart = () => {
 
   const [chartData, setChartData] = useState({
     datasets: [],
@@ -39,10 +39,10 @@ const DensityChart = () => {
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
         datasets: [
             {
-                label: 'Density Amount',
-                data: hempDensityData,
+                label: 'Yield Amount',
+                data: hempYieldData,
                 borderColor: 'rgb(53, 162, 235)',
-                backgroundColor: 'rgb(20, 151, 5, .5',
+                backgroundColor: 'rgb(53, 162, 235, 0.4',
               }, 
         ]
     })
@@ -53,7 +53,7 @@ const DensityChart = () => {
             },
             title: {
                 display: true,
-                text: 'Density Over Time'
+                text: 'Test Chart'
             }
         },
         maintainAspectRatio: false,
@@ -70,4 +70,4 @@ const DensityChart = () => {
   );
 };
 
-export default DensityChart;
+export default TestChart;

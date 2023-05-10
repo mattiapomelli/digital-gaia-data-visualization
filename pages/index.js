@@ -21,6 +21,7 @@ export default function Home() {
         <Header />
         <TopCards />
         <div className='p-2 grid md:grid-cols-2 grid-cols-1 gap-4'>
+          <button onClick="fetchData"></button>
           <HeightChart />
           <YieldChart />
           <DensityChart />

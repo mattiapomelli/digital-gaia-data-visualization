@@ -9,6 +9,8 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js';
+import report from '../data/report.json';
+
 
 ChartJS.register(
   CategoryScale,
@@ -19,7 +21,13 @@ ChartJS.register(
   Legend
 );
 
-const YieldChart = () => {
+
+const hempYieldData = report.map((item) => item.observations[0].value[0])
+
+console.log("Yield: ", hempYieldData)
+
+const TestChart = () => {
+
   const [chartData, setChartData] = useState({
     datasets: [],
   });
@@ -28,13 +36,13 @@ const YieldChart = () => {
 
   useEffect(() => {
     setChartData({
-        labels: ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun'],
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
         datasets: [
             {
-                label: 'Sales $',
-                data: [18127, 22201, 19490, 17938, 24182, 17842, 22475],
+                label: 'Yield Amount',
+                data: hempYieldData,
                 borderColor: 'rgb(53, 162, 235)',
-                backgroundColor: 'rgb(53, 162, 235, 0.4',
+                backgroundColor: 'rgb(65, 160, 103, 0.4',
               }, 
         ]
     })
@@ -62,4 +70,4 @@ const YieldChart = () => {
   );
 };
 
-export default YieldChart;
+export default TestChart;
