@@ -25,7 +25,7 @@ export default async function handler(req, res) {
       ${basePromptPrefix}${JSON.stringify(observations)}
       
 
-      ${query}
+      Can you tell me ${query}
       `;
 
     try {
