@@ -8,7 +8,7 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 const basePromptPrefix = `
-This is a dataset of observations about a hemp farm, taken over the course of a year one time per month.
+Given this dataset about a hemp farm.
 
 Dataset:
 `;
@@ -26,6 +26,8 @@ export default async function handler(req, res) {
       
 
       Can you tell me ${query}
+
+      If there are any calculations don't worry about them, just give me the answer.
       `;
 
     try {
