@@ -9,6 +9,7 @@ const statistics = [
   "Standard deviation",
   "Max value",
   "Min value",
+  "Increase percentage",
 ];
 const properties = ["Yield", "Hemp height", "Hemp density"];
 
