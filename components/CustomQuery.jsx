@@ -28,6 +28,7 @@ const CustomQuery = () => {
       >
         <input
           type="text"
+          placeholder="E.g. how many times yield was below 37"
           value={query}
           onChange={(event) => setQuery(event.target.value)}
           className="border border-gray-300 p-2 rounded-lg w-full h-full"
