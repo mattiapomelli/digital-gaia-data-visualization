@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import data from '../data/farm-data.json';
 
 import Header from '../components/Header';
 import TopCards from '../components/TopCards';
