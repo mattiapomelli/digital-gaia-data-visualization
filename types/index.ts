@@ -5,3 +5,9 @@ export interface Prompt {
   exampleInput?: string;
   exampleOutput?: string;
 }
+
+export interface PromptWithAuthor extends Prompt {
+  author: {
+    id: string;
+  };
+}

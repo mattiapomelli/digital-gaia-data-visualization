@@ -1,5 +1,5 @@
 import { useCeramicContext } from "@/context";
-import { Prompt } from "@/types";
+import { PromptWithAuthor } from "@/types";
 import { useQuery } from "@tanstack/react-query";
 import { gql } from "graphql-request";
 
@@ -11,6 +11,9 @@ const getPromptsQuery = gql`
           id
           text
           title
+          author {
+            id
+          }
         }
       }
     }
@@ -27,7 +30,7 @@ export const usePrompts = () => {
         .executeQuery<{
           promptIndex: {
             edges: {
-              node: Prompt;
+              node: PromptWithAuthor;
             }[];
           };
         }>(getPromptsQuery)

@@ -15,6 +15,8 @@ const CommunityQueries = () => {
 
   const { data: prompts, refetch: refetchPrompts } = usePrompts();
 
+  console.log("prompts: ", prompts);
+
   const handleLogin = async () => {
     const success = await authenticateCeramic(ceramic, composeClient);
     setIsLoggedIn(success);
@@ -44,7 +46,7 @@ const CommunityQueries = () => {
         <CreatePromptForm onSuccess={refetchPrompts} />
       ) : (
         <div className="mt-2">
-          <p className="mb-2">Connect to Ceramic to share your prompts</p>
+          <p className="mb-2">Connect to Ceramic to see and share prompts</p>
           <Button onClick={() => handleLogin()}>Connect</Button>
         </div>
       )}
