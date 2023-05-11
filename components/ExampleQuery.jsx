@@ -13,7 +13,7 @@ const statistics = [
 ];
 const properties = ["Yield", "Hemp height", "Hemp density"];
 
-const CustomQuery = () => {
+const ExampleQuery = () => {
   const [loading, setLoading] = useState(false);
   const [response, setResponse] = useState(null);
 
@@ -40,7 +40,7 @@ const CustomQuery = () => {
         <h4 className="font-extrabold mt-4" id="response">
           Statistic
         </h4>
-        <div className="flex gap-2 mt-1">
+        <div className="flex gap-2 mt-1 flex-wrap">
           {statistics.map((statistic) => (
             <button
               key={statistic}
@@ -60,7 +60,7 @@ const CustomQuery = () => {
           <h4 className="font-extrabold mt-4" id="response">
             Property
           </h4>
-          <div className="flex gap-2 mt-1">
+          <div className="flex gap-2 mt-1 flex-wrap">
             {properties.map((property) => (
               <button
                 key={property}
@@ -96,4 +96,4 @@ const CustomQuery = () => {
   );
 };
 
-export default CustomQuery;
+export default ExampleQuery;

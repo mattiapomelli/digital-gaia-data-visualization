@@ -13,6 +13,8 @@ const CustomQuery = () => {
     const response = await fetch("/api/generate?query=" + query);
     const data = await response.json();
 
+    console.log("Reponse: ", data);
+
     setResponse(data);
     setLoading(false);
   };
