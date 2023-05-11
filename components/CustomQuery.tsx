@@ -6,7 +6,7 @@ const CustomQuery = () => {
   const [loading, setLoading] = useState(false);
   const [response, setResponse] = useState(null);
 
-  const onSubmit = async (event) => {
+  const onSubmit = async (event: any) => {
     event.preventDefault();
     setLoading(true);
 

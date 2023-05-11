@@ -34,7 +34,7 @@ const ExampleQuery = () => {
   return (
     <div>
       <h3 className="text-lg text-green-800 font-extrabold mt-4" id="response">
-        Example query
+        Standard queries
       </h3>
       <div>
         <h4 className="font-extrabold mt-4" id="response">

@@ -1,13 +1,11 @@
 import Head from "next/head";
-import Image from "next/image";
-import data from "../data/farm-data.json";
 
 import Header from "../components/Header";
 import TopCards from "../components/TopCards";
 import HeightChart from "../components/HeightChart";
 import YieldChart from "../components/YieldChart";
 import DensityChart from "../components/DensityChart";
-import GPTCard from "../components/GPTCard";
+import GPTCard from "../components/AIAssistantCard";
 
 export default function Home() {
   return (
@@ -22,7 +20,6 @@ export default function Home() {
         <Header />
         <TopCards />
         <div className="p-2 flex flex-col gap-4">
-          <button onClick="fetchData"></button>
           <HeightChart />
           <YieldChart />
           <DensityChart />

@@ -1,6 +1,6 @@
 import cx from "classnames";
 
-export const Spinner = ({ className }) => {
+export const Spinner = ({ className }: { className?: string }) => {
   return (
     <svg
       className={cx("w-4 animate-spin", className)}
