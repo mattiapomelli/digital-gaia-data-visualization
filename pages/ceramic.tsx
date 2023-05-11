@@ -23,7 +23,9 @@ const CeramicPage: NextPage = () => {
   };
 
   useEffect(() => {
-    handleLogin();
+    if (localStorage.getItem("did") && !isLoggedIn) {
+      handleLogin();
+    }
   }, []);
 
   return (
@@ -31,11 +33,12 @@ const CeramicPage: NextPage = () => {
       <h2 className="text-xl text-green-800 font-extrabold mb-2">Prompts</h2>
       {!isLoggedIn ? (
         <button
+          className="py-2 px-4 flex items-center justify-center bg-green-800 hover:bg-green-950 text-white rounded-lg h-full min-w-[100px]"
           onClick={() => {
             handleLogin();
           }}
         >
-          Login
+          Login with Ceramic
         </button>
       ) : (
         <div>

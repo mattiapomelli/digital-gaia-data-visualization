@@ -19,9 +19,11 @@ export const authenticateCeramic = async (
   compose: ComposeClient,
 ) => {
   const sessionStr = localStorage.getItem("did"); // for production you will want a better place than localStorage for your sessions.
-  if (!sessionStr) return false;
+  let session;
 
-  let session = await DIDSession.fromSession(sessionStr);
+  if (sessionStr) {
+    session = await DIDSession.fromSession(sessionStr);
+  }
 
   if (!session || (session.hasSession && session.isExpired)) {
     if (window.ethereum === null || window.ethereum === undefined) {
