@@ -26,11 +26,11 @@ const PromptCard = ({ prompt }: PromptCardProps) => {
     <div key={prompt.id} className="bg-gray-300 rounded-lg p-4">
       <h3 className="font-bold text-lg">{prompt.title}</h3>
       <p>Prompt: {prompt.text}</p>
-      <p>Example input: {prompt.exampleInput}</p>
-      <p>Example output: {prompt.exampleOutput}</p>
+      {/* <p>Example input: {prompt.exampleInput}</p> */}
+      {/* <p>Example output: {prompt.exampleOutput}</p> */}
       <button
         onClick={onSubmit}
-        className="mt-2 py-2 px-4 flex items-center justify-center bg-green-800 hover:bg-green-950 text-white rounded-lg min-w-[100px]"
+        className="mt-2 py-2 px-4 flex items-center justify-center bg-green-800 hover:bg-green-950 text-white rounded-lg min-w-[100px] h-10"
       >
         {loading ? <Spinner /> : "Use prompt"}
       </button>

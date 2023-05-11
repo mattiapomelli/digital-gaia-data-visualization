@@ -1,7 +1,7 @@
 import React from "react";
 import CustomQuery from "@/components/CustomQuery";
 import ExampleQuery from "@/components/ExampleQuery";
-import PromptsQuery from "./PromptsQuery";
+import CommunityQuery from "./CommunityQuery";
 
 const AIAssistantCard = () => {
   return (
@@ -14,7 +14,7 @@ const AIAssistantCard = () => {
         <div className="h-px w-full bg-gray-300 mt-6" />
         <CustomQuery />
         <div className="h-px w-full bg-gray-300 mt-6" />
-        <PromptsQuery />
+        <CommunityQuery />
       </div>
     </div>
   );

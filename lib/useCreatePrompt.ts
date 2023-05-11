@@ -2,10 +2,10 @@ import { useCeramicContext } from "@/context";
 import { Prompt } from "@/types";
 import { useMutation } from "@tanstack/react-query";
 
-type CreatePromptInput = Omit<Prompt, "id">;
+export type CreatePromptInput = Omit<Prompt, "id">;
 
 interface UseCreatePromptOptions {
-  onSuccess: () => void;
+  onSuccess?: () => void;
 }
 
 export const useCreatePrompt = ({ onSuccess }: UseCreatePromptOptions) => {

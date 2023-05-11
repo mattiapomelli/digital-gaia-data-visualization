@@ -4,8 +4,9 @@ import { useCeramicContext } from "../context";
 import { authenticateCeramic } from "../utils";
 import { usePrompts } from "@/lib/usePrompts";
 import PromptCard from "./PromptCard";
+import CreatePromptForm from "./CreatePromptForm";
 
-const PromptsQuery = () => {
+const CommunityQueries = () => {
   const clients = useCeramicContext();
   const { ceramic, composeClient } = clients;
 
@@ -30,16 +31,17 @@ const PromptsQuery = () => {
         Community Queries
       </h3>
       <p>
-        These are the prompts that have been created by the community and
-        available to use to explore your dataset.
+        These are the prompts that have been created by the community members
+        (a.k.a. HempHumans) and available to use to explore your dataset.
       </p>
       <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 mt-4">
         {prompts?.map((prompt) => (
           <PromptCard key={prompt.id} prompt={prompt} />
         ))}
       </div>
+      <CreatePromptForm onSuccess={refetchPrompts} />
     </>
   );
 };
 
-export default PromptsQuery;
+export default CommunityQueries;
