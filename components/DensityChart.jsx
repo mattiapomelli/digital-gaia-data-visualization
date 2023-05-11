@@ -9,6 +9,8 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js';
+import report from '../data/report.json';
+
 
 ChartJS.register(
   CategoryScale,
@@ -19,7 +21,13 @@ ChartJS.register(
   Legend
 );
 
-const BarChart = () => {
+
+const hempDensityData = report.map((item) => item.observations[2].value[0])
+
+console.log("Density: ", hempDensityData)
+
+const DensityChart = () => {
+
   const [chartData, setChartData] = useState({
     datasets: [],
   });
@@ -28,13 +36,13 @@ const BarChart = () => {
 
   useEffect(() => {
     setChartData({
-        labels: ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun'],
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
         datasets: [
             {
-                label: 'Sales $',
-                data: [18127, 22201, 19490, 17938, 24182, 17842, 22475],
+                label: 'Density Amount',
+                data: hempDensityData,
                 borderColor: 'rgb(53, 162, 235)',
-                backgroundColor: 'rgb(53, 162, 235, 0.4',
+                backgroundColor: 'rgb(20, 151, 5, .5',
               }, 
         ]
     })
@@ -45,7 +53,7 @@ const BarChart = () => {
             },
             title: {
                 display: true,
-                text: 'Daily Revenue'
+                text: 'Density Over Time'
             }
         },
         maintainAspectRatio: false,
@@ -62,4 +70,4 @@ const BarChart = () => {
   );
 };
 
-export default BarChart;
+export default DensityChart;

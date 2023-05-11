@@ -6,9 +6,10 @@ const customers = () => {
   return (
     <div className='bg-gray-100 min-h-screen'>
       <div className='flex justify-between p-4'>
-        <h2 className='text-xl text-green-800 font-extrabold'>😃 About My Hemp Farm: {data.name}</h2> 
-        <h2 className='text-xl text-green-800 font-extrabold'>HempHub 🪴 </h2>
+        <h2 className='text-xl text-green-800 font-extrabold'> </h2> 
+        <h2 className='text-3xl text-green-800 font-extrabold'>🪴 HempHub </h2>
       </div>
+      <span className='text-3xl text-green-800  p-4 font-extrabold'> About My Farm: "{data.name}"</span>
       <div className='p-4'>
       <div className='w-full m-auto p-4 border rounded-lg bg-white overflow-y-auto'>
         <img src={"/crop.webp"} alt="Hemp Logo" />

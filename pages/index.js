@@ -1,10 +1,13 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import data from '../data/farm-data.json';
 
 import Header from '../components/Header';
 import TopCards from '../components/TopCards';
-import BarChart from '../components/BarChart';
-import RecentOrders from '../components/RecentOrders';
+import HeightChart from '../components/HeightChart';
+import YieldChart from '../components/YieldChart';
+import DensityChart from '../components/DensityChart';
+import GPTCard from '../components/GPTCard';
 
 export default function Home() {
   return (
@@ -19,10 +22,12 @@ export default function Home() {
         <Header />
         <TopCards />
         <div className='p-2 grid md:grid-cols-2 grid-cols-1 gap-4'>
-          <BarChart />
-          <BarChart />
-
+          <button onClick="fetchData"></button>
+          <HeightChart />
+          <YieldChart />
+          <DensityChart />
         </div>
+         <GPTCard />
       </main>
     </>
   );

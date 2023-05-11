@@ -10,9 +10,9 @@ const Sidebar = ({ children }) => {
     <div className='flex'>
       <div className='fixed w-20 h-screen p-4 bg-white border-r-[1px] flex flex-col justify-between'>
         <div className='flex flex-col items-center'>
-          <Link href='/'>
-            <div className='bg-green-800 text-white p-3 rounded-lg inline-block'>
-              <img src={"/hemp-logo.svg"} size={60} alt="Hemp Logo" />
+          <Link href='/home'>
+            <div className='bg-green-200 text-white p-3 rounded-lg inline-block'>
+              <img src={"/hemp-logo.webp"} size={100} alt="Hemp Logo" />
             </div>
           </Link>
           <span className='border-b-[1px] border-gray-200 w-full p-2'></span>
