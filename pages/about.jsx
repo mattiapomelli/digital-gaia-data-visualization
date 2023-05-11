@@ -1,8 +1,7 @@
 import React from "react";
 import data from "../data/farm-data.json";
-import report from "../data/report.json";
 
-const customers = () => {
+const AboutPage = () => {
   return (
     <div className="bg-gray-100 min-h-screen">
       <div className="flex justify-between p-4">
@@ -127,4 +126,4 @@ const customers = () => {
   );
 };
 
-export default customers;
+export default AboutPage;
