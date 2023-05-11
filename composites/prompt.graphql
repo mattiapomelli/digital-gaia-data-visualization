@@ -1,0 +1,8 @@
+type Prompt @createModel(accountRelation: LIST, description: "A GPT prompt") {
+  author: DID! @documentAccount
+  version: CommitID! @documentVersion
+  title: String! @string(maxLength: 200)
+  text: String! @string(maxLength: 5000)
+  exampleInput: String @string(maxLength: 1000)
+  exampleOutput: String @string(maxLength: 1000)
+}
