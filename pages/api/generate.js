@@ -8,7 +8,7 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 const basePromptPrefix = `
-Given this dataset about a hemp farm.
+Given this dataset about a hemp farm, with a set of observations for each month of the year, represented in the "datetime" field.
 
 Dataset:
 `;
@@ -43,7 +43,7 @@ export default async function handler(req, res) {
       return res.status(200).json(output);
     } catch (error) {
       console.error("Error: ", error);
-      return res.status(500).json({ message: "Internal server error" });
+      return res.status(500).json({ message: error });
     }
   } else {
     return res.status(405).json({ message: "Method is not allowed" });
