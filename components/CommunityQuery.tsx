@@ -5,6 +5,7 @@ import { authenticateCeramic } from "../utils";
 import { usePrompts } from "@/lib/usePrompts";
 import PromptCard from "./PromptCard";
 import CreatePromptForm from "./CreatePromptForm";
+import Button from "./Button";
 
 const CommunityQueries = () => {
   const clients = useCeramicContext();
@@ -39,7 +40,14 @@ const CommunityQueries = () => {
           <PromptCard key={prompt.id} prompt={prompt} />
         ))}
       </div>
-      <CreatePromptForm onSuccess={refetchPrompts} />
+      {isLoggedIn ? (
+        <CreatePromptForm onSuccess={refetchPrompts} />
+      ) : (
+        <div className="mt-2">
+          <p className="mb-2">Connect to Ceramic to share your prompts</p>
+          <Button onClick={() => handleLogin()}>Connect</Button>
+        </div>
+      )}
     </>
   );
 };
